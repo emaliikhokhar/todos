@@ -27,7 +27,7 @@ export default function Input() {
                     list.map((elem) => {
                         return (
                         <div className="disp">
-                            <div key="elem.id" className="inner align-middle mb-4">
+                            <div key={elem.id} className="inner align-middle mb-4">
                                 <h3>{elem.data}</h3>
                             </div>
                             <span className="submit btn btn-dark align-self-center”" onClick={() => dispatch(deleteToDo(elem.id))}>Delete</span>

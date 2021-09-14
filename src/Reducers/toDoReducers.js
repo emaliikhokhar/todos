@@ -1,5 +1,6 @@
 const initialState = {
-    list: []
+    list: [],
+    counter: 1
 }
 
 // const [list, setList] = useState([]);
@@ -21,6 +22,7 @@ const todoReducer = (state = initialState, action) => {
             break;
 
         case "DELETE_TO_DO":
+            console.log(state.list)
             const newList = state.list.filter((list) => list.id !== action.id)
             return {
                 ...state,
