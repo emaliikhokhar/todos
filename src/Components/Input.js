@@ -9,6 +9,7 @@ export default function Input() {
     const [inputData, setInputData] = useState('');
     const list = useSelector((state)=>state.todoReducers.list);
     const dispatch = useDispatch();
+    const [removeAll, setRemoveAll] = useState(false);
 
     return (
         <div>
@@ -19,7 +20,8 @@ export default function Input() {
                 <form> 
                     <input type="text" placeholder="Enter To-Do Here" value={inputData} 
                     onChange={(event) => setInputData(event.target.value)}/>
-                    <span className="btn btn-dark submit align-self-center”" onClick={() => {dispatch(addToDo(inputData), setInputData(''))}}>Add</span>
+                    <span className="btn btn-dark submit align-self-center”" onClick={() => {dispatch(addToDo(inputData), setInputData(''))}}
+                     >Add</span>
                 </form>
             </div>
             <div className="items">
@@ -37,7 +39,8 @@ export default function Input() {
                 }
             </div>
             <div>
-            <span className="remove btn btn-dark align-self-center”" onClick={() => dispatch(removeToDo())}>Remove All</span>
+            { (list.length !== 0) ? <span className="remove btn btn-dark align-self-center”" 
+            onClick={() => dispatch(removeToDo())}>Remove All</span> : null }
             </div>
         </div>
     )
