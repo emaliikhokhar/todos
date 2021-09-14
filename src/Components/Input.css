@@ -20,6 +20,7 @@ input[type=text] {
 .heading {
     padding: 20px;
     color: white;
+    word-spacing: 4px;
 }
 
 .disp {

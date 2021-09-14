@@ -14,7 +14,7 @@ export default function Input() {
     return (
         <div>
             <div className="heading align-middle">
-                <h1>To Do's List</h1>
+                <h1>Welcome to To-Do App</h1>
             </div>
             <div className="align-middle mb-4">
                 <form> 
