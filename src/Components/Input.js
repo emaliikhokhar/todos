@@ -39,7 +39,7 @@ export default function Input() {
                 }
             </div>
             <div>
-            { (list.length !== 0) ? <span className="remove btn btn-dark align-self-center”" 
+            { (list.length !== 0) ? <span className="remove btn btn-dark align-self-center" 
             onClick={() => dispatch(removeToDo())}>Remove All</span> : null }
             </div>
         </div>
